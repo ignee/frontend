@@ -17,7 +17,7 @@ const App = () => {
         setLoading(true);
         setError('');
         try {
-            const response = await axios.get('http://localhost:3001/users');
+            const response = await axios.get('http://35.154.197.112:3001/users');
             setUsers(response.data);
         } catch (error) {
             console.error('Error fetching users:', error);
