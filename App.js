@@ -35,7 +35,7 @@ const App = () => {
             return;
         }
         try {
-            const response = await axios.post('http://localhost:3001/users', { name, email });
+            const response = await axios.post('http://35.154.197.112:3001/users', { name, email });
             console.log(response.data.message);
             fetchUsers(); // Refresh user list after adding
             setName('');
