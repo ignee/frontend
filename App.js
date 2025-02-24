@@ -6,6 +6,7 @@ const App = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
 
     // Fetch users on component mount
     useEffect(() => {
@@ -13,18 +14,26 @@ const App = () => {
     }, []);
 
     const fetchUsers = async () => {
+        setLoading(true);
+        setError('');
         try {
             const response = await axios.get('http://localhost:3001/users');
             setUsers(response.data);
-            setLoading(false);
         } catch (error) {
             console.error('Error fetching users:', error);
+            setError('Failed to fetch users. Please try again later.');
+        } finally {
             setLoading(false);
         }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setError('');
+        if (!name.trim() || !email.trim()) {
+            setError('Both name and email are required.');
+            return;
+        }
         try {
             const response = await axios.post('http://localhost:3001/users', { name, email });
             console.log(response.data.message);
@@ -33,6 +42,7 @@ const App = () => {
             setEmail('');
         } catch (error) {
             console.error('Error adding user:', error);
+            setError('Failed to add user. Please try again later.');
         }
     };
 
@@ -62,6 +72,9 @@ const App = () => {
                     Add User
                 </button>
             </form>
+
+            {/* Display error messages */}
+            {error && <p style={{ color: 'red' }}>{error}</p>}
 
             {/* Display user table */}
             {loading ? (
