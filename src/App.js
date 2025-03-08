@@ -44,7 +44,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>&copy; 2025 My React App. All rights reserved.</p>
+        <p>&copy;THE END.</p>
       </footer>
     </div>
   );
