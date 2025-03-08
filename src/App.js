@@ -6,7 +6,7 @@ function App() {
     <div className="app">
       <header className="header">
         <nav className="navbar">
-          <h1 className="logo">My React App</h1>
+          <h1 className="logo">Irasshaimase</h1>
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#features">Features</a></li>
@@ -18,26 +18,26 @@ function App() {
       <main className="main-content">
         {/* Hero Section */}
         <section className="hero">
-          <h2>Welcome to My React App</h2>
-          <p>Your one-stop solution for modern web development!</p>
+          <h2>Konichiwa!!</h2>
+          <p>This is My First Nihongo Lesson!!</p>
           <button className="cta-button">Get Started</button>
         </section>
 
         {/* Features Section */}
         <section id="features" className="features">
-          <h2>Features</h2>
+          <h2> Knacks</h2>
           <div className="feature-cards">
             <div className="card">
               <h3>Fast</h3>
-              <p>Experience blazing-fast performance with React.</p>
+              <p>Experience quick learning.</p>
             </div>
             <div className="card">
               <h3>Modern</h3>
-              <p>Built with the latest technologies in mind.</p>
+              <p>Go with Innovative Learning.</p>
             </div>
             <div className="card">
-              <h3>Scalable</h3>
-              <p>Perfect for projects of any size.</p>
+              <h3>Flexible</h3>
+              <p>Can Be Learn Anytime and Anywere.</p>
             </div>
           </div>
         </section>
