@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     // Replace with your backend URL
-    const backendUrl = "https://java-ylej.onrender.com/api/data";
+    const backendUrl = "https://java-ylej.onrender.com";
 
     const fetchData = async () => {
       try {
